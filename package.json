@@ -1,18 +1,20 @@
 {
   "name": "node-express-development",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "process code for <Web development with Node and Express>",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.3"
-  },
-  "devDependencies": {
+    "express": "^4.16.3",
     "nunjucks": "^3.1.2"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["node", "express", "nunjucks"],
+  "author": "XLee",
+  "license": "ISC",
+  "repository": {
+    "git": "https://github.com/wslx520/node-express-development/"
+  }
 }

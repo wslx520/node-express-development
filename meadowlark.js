@@ -2,6 +2,9 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 
 
+
+const getFortune = require('./lib/fortunes');
+
 let app = express();
 
 app.set('port', process.env.PORT || 3000);
@@ -18,18 +21,10 @@ app.get('/', (req, res) => {
         pageTitle: 'Meadowlark: Welcome'
     });
 });
-let fortunes = [
-    "Conquer your fears or they will conquer you.",
-    "Rivers need springs.",
-    "Do not fear what you don't know.",
-    "You will have a pleasant surprise.",
-    "Whenever possible, keep it simple.",
-];
 app.get('/about', (req, res) => {
-    let fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
     res.render('about.html', {
         pageTitle: 'About Meadowlark',
-        fortune
+        fortune: getFortune()
     });
 });
 app.use(express.static(__dirname + '/public'));
